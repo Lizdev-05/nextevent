@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>other pages</div>;
+  return <div>Dynamic page</div>;
 };
 
 export default page;
