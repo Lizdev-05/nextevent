@@ -1,7 +1,7 @@
 import React from "react";
 
-const slug = () => {
-  return <div>slug</div>;
+const FilteredEventPage = () => {
+  return <div>Filtered Event</div>;
 };
 
-export default slug;
+export default FilteredEventPage;
