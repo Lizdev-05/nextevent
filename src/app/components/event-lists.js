@@ -1,15 +1,24 @@
 import React from "react";
 import EventItem from "./evet-item";
 
-const allEvents = (props) => {
+const EventList = (props) => {
   const { items } = props;
   return (
     <ul>
       {items.map((item) => {
-        <EventItem />;
+        return (
+          <EventItem
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            location={item.location}
+            date={item.date}
+            image={item.image}
+          />
+        );
       })}
     </ul>
   );
 };
 
-export default allEvents;
+export default EventList;
