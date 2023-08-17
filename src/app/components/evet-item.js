@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import styles from "./event-item.module.css";
 
 const EventItem = (props) => {
   const { id, title, date, location, image } = props;
@@ -15,19 +16,19 @@ const EventItem = (props) => {
   const exploreLink = `/events/${id}`;
 
   return (
-    <li>
+    <li className={styles.item}>
       <img src={"/" + image} alt={title} />
-      <div>
-        <div>
+      <div className={styles.content}>
+        <div className={styles.summary}>
           <h2>{title}</h2>
-          <div>
+          <div className={styles.date}>
             <time>{readableDate}</time>
           </div>
-          <div>
+          <div className={styles.address}>
             <address>{formatAddress}</address>
           </div>
         </div>
-        <div>
+        <div className={styles.actions}>
           <Link href={exploreLink}>Explore Event</Link>
         </div>
       </div>
