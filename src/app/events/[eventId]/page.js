@@ -8,9 +8,9 @@ import ErrorAlert from "@/app/components/ui/error-alert/error-alert";
 const EventDetails = (props) => {
   const { params } = props;
   const eventId = params.eventId;
-  console.log(eventId);
 
   const event = getEventById(eventId);
+
   if (!event) {
     return (
       <>
