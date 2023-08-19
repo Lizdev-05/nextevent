@@ -9,17 +9,18 @@ const EventDetails = (props) => {
   const { params } = props;
   const eventId = params.eventId;
   console.log(eventId);
-  if (!eventId) {
+
+  const event = getEventById(eventId);
+  if (!event) {
     return (
       <>
         <ErrorAlert>
-          <p>Event not found.</p>;
+          <p>Event not found.</p>
         </ErrorAlert>
         <ResultsTitle />
       </>
     );
   }
-  const event = getEventById(eventId);
 
   return <EventDetail detail={event} />;
 };
