@@ -51,7 +51,7 @@
 NextEvent is a website specializing in event management and ticketing. The platform provides users with the ability to explore, organize, and publicize local events...
 
 <div align="center">
-  <img  width="1000" alt="event" src="./public/images/cover-page.png">
+  <img  width="1000" alt="event" src="./images/cover-page.png">
 
 </div>
 
