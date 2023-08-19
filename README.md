@@ -48,7 +48,7 @@
 
 ### NextEvent
 
-NextEvent is a website specializing in event management and ticketing. The platform provides users with the ability to explore, organize, and publicize local events...
+NextEvent is a website built mainly to practice NextJs routing. With this app, you can view all events, get a specific event and even filter events by the dynamic route...
 
 <div align="center">
   <img  width="1000" alt="event" src="./cover-page.png">
@@ -97,7 +97,7 @@ Here is the [live link](https://NextEvent.netlify.app/) of the app
 
 ### Testing
 
-In order to run tests for this project make sure you have installed all previously mentioned [prerequisites](#prerequisites) section, then run the code below.
+In order to run tests for this project make sure you have installed all previously mentioned [prerequisites](#prerequisites) sections, then run the code below.
 
 - Run all tests
   - This should run all tests using 'react-test-renderer'
