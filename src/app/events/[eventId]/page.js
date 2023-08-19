@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { getEventById } from "../../../../dummy-data";
-import EventDetail from "@/app/components/event-detail";
+import EventDetail from "@/app/components/events/event-detail";
 
 const EventDetails = (props) => {
   const { params } = props;
