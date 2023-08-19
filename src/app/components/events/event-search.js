@@ -1,19 +1,20 @@
 import React from "react";
 import Button from "../ui/button";
+import styles from "./event-search.module.css";
 
 const FilteredEvent = () => {
   return (
-    <form>
-      <div>
-        <div>
-          <label htmlFor="year">Enter Year</label>
+    <form className={styles.form}>
+      <div className={styles.controls}>
+        <div className={styles.control}>
+          <label htmlFor="year">Year</label>
           <select name="year" id="year">
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
         </div>
-        <div>
-          <label htmlFor="Enter Month"></label>
+        <div className={styles.control}>
+          <label htmlFor="Month">Month</label>
           <select name="moneth" id="month">
             <option value="1">January</option>
             <option value="2">February</option>
@@ -30,7 +31,7 @@ const FilteredEvent = () => {
           </select>
         </div>
       </div>
-      <Button>Enter your search</Button>
+      <Button>Find Events</Button>
     </form>
   );
 };
