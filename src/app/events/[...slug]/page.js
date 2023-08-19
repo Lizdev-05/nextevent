@@ -1,17 +1,17 @@
 "use client";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { getFilteredEvents } from "../../../../dummy-data";
+import EventList from "@/app/components/events/event-lists";
+import ResultsTitle from "@/app/components/ui/results-title/results-title";
 
 const FilteredEventPage = (props) => {
   const { params } = props;
-  const filteredData = params.sluf;
-  // const router = useRouter();
-  // const filteredData = router.query.page;
+  const filteredData = params.slug;
 
   if (!filteredData) {
     return <p className="center">Loading...</p>;
   }
+  console.log(filteredData);
   const filteredYear = filteredData[0];
   const filteredMonth = filteredData[1];
 
@@ -40,7 +40,12 @@ const FilteredEventPage = (props) => {
     return <p className="center">No event found for the chosen filter</p>;
   }
 
-  return <div>Filtered Event</div>;
+  return (
+    <div>
+      <ResultsTitle />
+      <EventList items={filteredEvent} />
+    </div>
+  );
 };
 
 export default FilteredEventPage;
