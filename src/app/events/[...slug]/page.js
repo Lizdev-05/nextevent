@@ -3,6 +3,7 @@ import React from "react";
 import { getFilteredEvents } from "../../../../dummy-data";
 import EventList from "@/app/components/events/event-lists";
 import ResultsTitle from "@/app/components/ui/results-title/results-title";
+import ErrorAlert from "@/app/components/ui/error-alert/error-alert";
 
 const FilteredEventPage = (props) => {
   const { params } = props;
@@ -27,7 +28,12 @@ const FilteredEventPage = (props) => {
     numMonth > 12
   ) {
     return (
-      <p className="center">Invalid Filter. Kindly adjust your input...</p>
+      <>
+        <ErrorAlert>
+          <p>Invalid Filter. Kindly adjust your input...</p>
+        </ErrorAlert>
+        <ResultsTitle />
+      </>
     );
   }
 
@@ -37,7 +43,14 @@ const FilteredEventPage = (props) => {
   });
 
   if (!filteredEvent || filteredEvent === 0) {
-    return <p className="center">No event found for the chosen filter</p>;
+    return (
+      <>
+        <ErrorAlert>
+          <p>No event found for the chosen filter</p>
+        </ErrorAlert>
+        <ResultsTitle />
+      </>
+    );
   }
 
   return (
